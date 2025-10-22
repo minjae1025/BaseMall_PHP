@@ -1,0 +1,139 @@
+header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.header-top {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.header-login,
+.header-signup {
+    text-decoration: none;
+    color: #444;
+    font-weight: 400;
+}
+
+.header-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-bottom {
+    display: block;
+    padding: 10px 20px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-menu-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding-bottom: 6px;
+}
+
+.nav-menu-ul {
+    gap: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.nav-menu>a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 450;
+}
+
+.nav-menu {
+    display: inline;
+    flex: 0 0 auto;
+}
+
+.nav-user-box>div {
+    width: 32px;
+}
+
+.nav-user-box {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-trigger {
+    margin-right: 30px;
+}
+
+.menu-trigger,
+.menu-trigger span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+}
+
+.menu-trigger {
+    position: relative;
+    width: 30px;
+    height: 18px;
+}
+
+.menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    border-radius: 2px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+    top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-trigger span:nth-of-type(3) {
+    bottom: 0;
+}
+
+.menu-trigger.active-1 span:nth-of-type(1) {
+  -webkit-transform: translateY(8px) rotate(-45deg);
+  transform: translateY(8px) rotate(-45deg);
+}
+
+.menu-trigger.active-1 span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.menu-trigger.active-1 span:nth-of-type(3) {
+  -webkit-transform: translateY(-8px) rotate(45deg);
+  transform: translateY(-8px) rotate(45deg);
+}

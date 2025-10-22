@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>베이스몰</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/sign_up.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <div class="header-back">
+                <a href="#" onclick="history.back();"><img src="../img/login_back.svg" alt="" width="25px"></a>
+            </div>
+            <div class="logo-box">
+                <a href="/BaseMall/">
+                    <img src="../img/logo_1.png" alt="베이스몰 로고" height="60px">
+                </a>
+            </div>
+        </div>
+        <hr style="color: lightgray;">
+    </header>
+    <main>
+        <div class="sign_up-title">
+            <p class="sign_up-text">회원가입</p>
+        </div>
+        <div>
+            <form action="#" method="post" class="sign-up-form">
+                <table class="form_table">
+                    <tr>
+                        <td colspan="2" style="font-size: 12px; color: red; text-align: center;">* 필수 입력 사항</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p class="input-label">아이디<span class="input-required">*</span></p>
+                        </th>
+                        <td><input type="text" name="user_id" id="user_id" class="form-input" placeholder="" required
+                                style="width: 100%;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p class="input-label">비밀번호<span class="input-required">*</span></p>
+                        </th>
+                        <td><input type="password" name="user_pw" id="user_pw" class="form-input" placeholder=""
+                                required style="width: 100%;"></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p class="input-label">비밀번호 확인<span class="input-required">*</span></p>
+                        </th>
+                        <td><input type="password" name="user_pw_check" id="user_pw_check" class="form-input"
+                                placeholder="" required style="width: 100%;"></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p class="input-label">전화번호<span class="input-required">*</span></p>
+                        </th>
+                        <td><input type="tel" name="user_tel" id="user_tel" class="form-input" placeholder="" required
+                                style="width: 100%;"></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p class="input-label">이름<span class="input-required">*</span></p>
+                        </th>
+                        <td><input type="text" name="user_name" id="user_name" class="form-input" placeholder=""
+                                required style="width: 100%;"></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p class="input-label">이메일</p>
+                        </th>
+                        <td><input type="email" name="user_email" id="user_email" class="form-input" placeholder=""
+                                style="width: 100%;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="sign-up-btn-box">
+                                <button type="submit" class="sign-up-btn" style="width: 101%;">회원가입</button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div>
+            <div class="sign-up-login-box">
+                <a href="login.html" class="login-signup">로그인</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

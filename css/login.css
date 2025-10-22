@@ -1,0 +1,97 @@
+header {
+    max-width: 576px;
+    margin: 0 auto;
+}
+
+.header-top {
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-box {
+    display: flex;
+}
+
+.login-text {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+}
+
+.login-title {
+    margin-top: 30px;
+}
+
+.login-form {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    width: 400px;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.form_input:focus {
+    outline: none;
+    border-bottom: solid #074CA1;
+    border-width: 0px 0px 1px 0px;
+}
+
+.login-btn-box button {
+    margin-top: 20px;
+    height: 50px;
+    background-color: #074CA1;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.login-signup {
+    text-decoration: none;
+    color: #222222;
+    font-size: 14px;
+}
+
+.login-signup-box {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* 포커스되거나 값이 있으면 레이블을 위로 올림 (기존 규칙 유지) */
+.form_input:focus + label,
+.form_input:not(:placeholder-shown) + label {
+    top: -6px; /* 위로 올리는 값 (조절 가능) */
+    font-size: 12px;
+    color: #333;
+}
+.input-box {
+    position: relative;
+}
+
+.form_input {
+    box-sizing: border-box;
+    padding: 14px 10px 6px; /* 위쪽 패딩 늘려 레이블이 보이게 함 */
+    height: 50px;
+    border: solid #ddd;
+    border-width: 0px 0px 1px 0px;
+    font-size: 16px;
+    background: transparent;
+}
+
+/* 기본: 레이블은 입력 내부(내려간 상태) */
+.input-box label {
+    position: absolute;
+    left: 10px;
+    top: 18px;
+    font-size: 16px;
+    color: #aaa;
+    transition: all 0.18s ease; /* 좀 더 빠르고 자연스러운 전환 */
+    font-size: 16px; /* 초기 글자 크기 */
+    pointer-events: none; /* 레이블 클릭 시 포커스 문제 방지 */
+}
