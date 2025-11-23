@@ -5,61 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>베이스몰</title>
-    <link rel="stylesheet" href="./css/header.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/footer.css">
 </head>
 
 <body>
     <header>
-        <div class="header-top">
-            <div class="header-logo">
-                <a href="/BaseMall/" class="header-logo-a"><img src="./img/logo_1.png" alt="베이스몰 로고" height="100px"></a>
+        <div class="header-container">
+            <div class="header-top">
+                <div class="header-logo">
+                    <a href="/BaseMall/" class="header-logo-a"><img src="./img/logo_1.png" alt="베이스몰 로고"
+                            height="100px"></a>
+                </div>
+                <div class="header-user">
+                    <a href="./html/login.html" class="header-login">로그인</a>
+                    <a href="./html/sign_up.html" class="header-signup">회원가입</a>
+                </div>
             </div>
-            <div class="header-user">
-                <a href="./html/login.html" class="header-login">로그인</a>
-                <a href="./html/sign_up.html" class="header-signup">회원가입</a>
+            <div class="header-bottom">
+                <nav class="header-nav">
+                    <a class="menu-trigger" href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                    <div class="nav-menu-box">
+                        <ul class="nav-menu-ul">
+                            <!-- <li class="nav-menu"><a href="/">콜라보</a></li> -->
+                            <li class="nav-menu"><a href="/BaseMall/">NEW</a></li>
+                            <li class="nav-menu"><a href="/BaseMall/">유니폼</a></li>
+                            <li class="nav-menu"><a href="/BaseMall/">모자</a></li>
+                            <li class="nav-menu"><a href="/BaseMall/">의류</a></li>
+                            <li class="nav-menu"><a href="/BaseMall/">가방</a></li>
+                            <li class="nav-menu"><a href="/BaseMall/">야구용품</a></li>
+                            <li class="nav-menu"><a href="/BaseMall/">응원용품</a></li>
+                            <li class="nav-menu"><a href="/BaseMall/">플레이어</a></li>
+                            <li class="nav-menu"><a href="/BaseMall/">캐릭터상품</a></li>
+                            <li class="nav-menu"><a href="/BaseMall/">잡화</a></li>
+                            <li class="nav-menu"><a href="/BaseMall/">SALE</a></li>
+                            <li class="nav-menu"><a href="/BaseMall/">골프용품</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-user-box">
+                        <div class="nav-search-btn">
+                            <a href="/BaseMall/"><img src="./img/header/nav_search.svg" alt="" width="100%"></a>
+                        </div>
+                        <div class="nav-user-btn">
+                            <a href="/BaseMall/"><img src="./img/header/nav_user.svg" alt="" width="100%"></a>
+                        </div>
+                        <div class="nav-cart-btn">
+                            <a href="/BaseMall/"><img src="./img/header/nav_cart.svg" alt="" width="100%"></a>
+                        </div>
+                    </div>
+                </nav>
             </div>
         </div>
-        <div class="header-bottom">
-            <nav class="header-nav">
-                <a class="menu-trigger" href="#">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a>
-                <div class="nav-menu-box">
-                    <ul class="nav-menu-ul">
-                        <!-- <li class="nav-menu"><a href="/">콜라보</a></li> -->
-                        <li class="nav-menu"><a href="/BaseMall/">NEW</a></li>
-                        <li class="nav-menu"><a href="/BaseMall/">유니폼</a></li>
-                        <li class="nav-menu"><a href="/BaseMall/">모자</a></li>
-                        <li class="nav-menu"><a href="/BaseMall/">의류</a></li>
-                        <li class="nav-menu"><a href="/BaseMall/">가방</a></li>
-                        <li class="nav-menu"><a href="/BaseMall/">야구용품</a></li>
-                        <li class="nav-menu"><a href="/BaseMall/">응원용품</a></li>
-                        <li class="nav-menu"><a href="/BaseMall/">플레이어</a></li>
-                        <li class="nav-menu"><a href="/BaseMall/">캐릭터상품</a></li>
-                        <li class="nav-menu"><a href="/BaseMall/">잡화</a></li>
-                        <li class="nav-menu"><a href="/BaseMall/">SALE</a></li>
-                        <li class="nav-menu"><a href="/BaseMall/">골프용품</a></li>
-                    </ul>
-                </div>
-                <div class="nav-user-box">
-                    <div class="nav-search-btn">
-                        <a href="/BaseMall/"><img src="./img/header/nav_search.svg" alt="" width="100%"></a>
-                    </div>
-                    <div class="nav-user-btn">
-                        <a href="/BaseMall/"><img src="./img/header/nav_user.svg" alt="" width="100%"></a>
-                    </div>
-                    <div class="nav-cart-btn">
-                        <a href="/BaseMall/"><img src="./img/header/nav_cart.svg" alt="" width="100%"></a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-
     </header>
 
     <main>
@@ -88,7 +92,7 @@
                         <p class="product-name">삼성라이온즈 SL 팔각 응원봉</p>
                         <p class="product-price">10,000원</p>
                     </a>
-                </div> 
+                </div>
                 <div class="product">
                     <a href="/BaseMall/">
                         <div>
@@ -97,7 +101,7 @@
                         <p class="product-name">2025 레플리카 홈 유니폼</p>
                         <p class="product-price">89,900원</p>
                     </a>
-                </div> 
+                </div>
                 <div class="product">
                     <a href="/BaseMall/">
                         <div>
@@ -106,7 +110,7 @@
                         <p class="product-name">2025 레플리카 어웨이 유니폼</p>
                         <p class="product-price">89,000원</p>
                     </a>
-                </div> 
+                </div>
             </div>
         </div>
     </main>

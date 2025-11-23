@@ -31,7 +31,7 @@ header {
     margin: 0 auto;
     flex-direction: column;
     width: 550px;
-    padding: 0 20px;
+    padding: 20px;
 }
 
 .login-signup {
@@ -47,28 +47,9 @@ header {
 
 .input-required {
     color: red;
+    vertical-align: top;
     font-size: 12px;
-    margin-left: 5px;
-}
-
-.form-input:focus {
-    outline: none;
-    border: solid #074CA1;
-}
-
-.form-input {
-    box-sizing: border-box;
-    padding: 10px;
-    height: 50px;
-    border: solid #ddd;
-    border-width: 1px;
-    border-radius: 12px;
-    font-size: 16px;
-    background: transparent;
-}
-
-.form_table td {
-    padding: 10px 0;
+    margin-left: 1px;
 }
 
 .sign-up-btn-box button {
@@ -81,18 +62,4 @@ header {
     border-radius: 5px;
     cursor: pointer;
 
-}
-
-/* th 크기 조절: 기본 최소 너비와 높이 지정 */
-.form_table th {
-    font-weight: 600;
-    min-width: 120px; /* 필요시 조절 */
-    height: 48px;
-    white-space: nowrap; /* 텍스트 줄바꿈 방지(필요 없으면 제거) */
-}
-
-.input-label {
-    margin: 0px 50px 0px 0px;
-    text-align: left;
-    font-weight: 500;
 }
