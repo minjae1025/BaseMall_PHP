@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,8 +25,13 @@
                             height="100px"></a>
                 </div>
                 <div class="header-user">
+                    <?php if (!isset($_SESSION['user_id'])): ?>
                     <a href="./html/login.html" class="header-login">로그인</a>
                     <a href="./html/sign_up.html" class="header-signup">회원가입</a>
+                    <?php else: ?>
+                    <a href="./php/logout.php" class="header-logout">로그아웃</a>
+                    <a href="./php/mypage.php" class="header-mypage">마이페이지</a>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="header-bottom">
