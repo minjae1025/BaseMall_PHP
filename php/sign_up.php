@@ -17,7 +17,7 @@ if (strlen(trim($user_id)) > 30) {
     exit;
 }
 
-$sql = "SELECT * FROM user WHERE user_id = '$user_id'";
+$sql = "SELECT * FROM users WHERE user_id = '$user_id'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -26,7 +26,7 @@ if (mysqli_num_rows($result) > 0) {
     $user_passwd = password_hash($user_passwd, PASSWORD_BCRYPT);
     $user_phone = $_POST['user_phone'] ?? null;
     $user_address = $_POST['user_address'] ?? null;
-    $insert_sql = "INSERT INTO user VALUES(null, '$user_id', '$user_passwd', '$user_name', '$user_email', '$user_phone', '$user_address')";
+    $insert_sql = "INSERT INTO users VALUES(null, '$user_id', '$user_passwd', '$user_name', '$user_email', '$user_phone', '$user_address')";
     $result = mysqli_query($conn, $insert_sql);
     if ($result) {
         echo "<script>alert('회원가입이 완료되었습니다.'); location.href='../index.html';</script>";

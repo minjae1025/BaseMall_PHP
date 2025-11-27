@@ -138,3 +138,10 @@ header {
 .menu-trigger.active-1 span:nth-of-type(3) {
     transform: translateY(-8px) rotate(45deg);
 }
+
+footer {
+    background-color: #074CA1;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+}

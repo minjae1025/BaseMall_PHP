@@ -3,7 +3,7 @@ include 'db_conn.php';
 $user_id = $_POST['user_id'];
 $user_passwd = $_POST['user_passwd'];
 
-$sql = "SELECT * FROM user WHERE user_id = '$user_id'";
+$sql = "SELECT * FROM users WHERE user_id = '$user_id'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {

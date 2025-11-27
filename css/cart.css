@@ -1,0 +1,33 @@
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.item {
+    border: 1px solid #ddd;
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    background-color: #fff;
+}
+
+.item-img img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.item-content {
+    align-content: space-around;
+    display: grid;
+    flex-direction: column;
+    flex: 1 0 auto;
+}
+
+.item-control {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}

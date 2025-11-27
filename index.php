@@ -11,9 +11,8 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/footer.css">
 </head>
 
 <body>
@@ -26,11 +25,11 @@ session_start();
                 </div>
                 <div class="header-user">
                     <?php if (!isset($_SESSION['user_id'])): ?>
-                    <a href="./html/login.html" class="header-login">로그인</a>
-                    <a href="./html/sign_up.html" class="header-signup">회원가입</a>
+                        <a href="./html/login.html" class="header-login">로그인</a>
+                        <a href="./html/sign_up.html" class="header-signup">회원가입</a>
                     <?php else: ?>
-                    <a href="./php/logout.php" class="header-logout">로그아웃</a>
-                    <a href="./php/mypage.php" class="header-mypage">마이페이지</a>
+                        <a href="./php/logout.php" class="header-logout">로그아웃</a>
+                        <a href="./php/mypage.php" class="header-mypage">마이페이지</a>
                     <?php endif; ?>
                 </div>
             </div>
@@ -43,7 +42,6 @@ session_start();
                     </a>
                     <div class="nav-menu-box">
                         <ul class="nav-menu-ul">
-                            <!-- <li class="nav-menu"><a href="/">콜라보</a></li> -->
                             <li class="nav-menu"><a href="/BaseMall/">NEW</a></li>
                             <li class="nav-menu"><a href="/BaseMall/">유니폼</a></li>
                             <li class="nav-menu"><a href="/BaseMall/">모자</a></li>
@@ -62,11 +60,8 @@ session_start();
                         <div class="nav-search-btn">
                             <a href="/BaseMall/"><img src="./img/header/nav_search.svg" alt="" width="100%"></a>
                         </div>
-                        <div class="nav-user-btn">
-                            <a href="/BaseMall/"><img src="./img/header/nav_user.svg" alt="" width="100%"></a>
-                        </div>
                         <div class="nav-cart-btn">
-                            <a href="/BaseMall/"><img src="./img/header/nav_cart.svg" alt="" width="100%"></a>
+                            <a href="/BaseMall/php/cart.php"><img src="./img/header/nav_cart.svg" alt="" width="100%"></a>
                         </div>
                     </div>
                 </nav>
@@ -93,9 +88,9 @@ session_start();
             <p class="product-box-title">인기 상품</p>
             <div class="product-list">
                 <div class="product">
-                    <a href="/BaseMall/">
+                    <a href="/BaseMall/php/product.php">
                         <div>
-                            <img src="./img/products/product_1.jpg" alt="상품1" class="product-img" width="100%">
+                            <img src="./img/product/product_1.jpg" alt="상품1" class="product-img" width="100%">
                         </div>
                         <p class="product-name">삼성라이온즈 SL 팔각 응원봉</p>
                         <p class="product-price">10,000원</p>
@@ -104,7 +99,7 @@ session_start();
                 <div class="product">
                     <a href="/BaseMall/">
                         <div>
-                            <img src="./img/products/product_2.jpg" alt="상품1" class="product-img" width="100%">
+                            <img src="./img/product/product_2.jpg" alt="상품1" class="product-img" width="100%">
                         </div>
                         <p class="product-name">2025 레플리카 홈 유니폼</p>
                         <p class="product-price">89,900원</p>
@@ -113,7 +108,7 @@ session_start();
                 <div class="product">
                     <a href="/BaseMall/">
                         <div>
-                            <img src="./img/products/product_3.jpg" alt="상품1" class="product-img" width="100%">
+                            <img src="./img/product/product_3.jpg" alt="상품1" class="product-img" width="100%">
                         </div>
                         <p class="product-name">2025 레플리카 어웨이 유니폼</p>
                         <p class="product-price">89,000원</p>
@@ -130,19 +125,8 @@ session_start();
         </div>
     </footer>
 
+    <script src="./js/menu_trigger.js"></script>
     <script>
-        var burger = document.querySelector('.menu-trigger');
-
-        burger.addEventListener('click', function (e) {
-            e.preventDefault();
-            burger.classList.toggle('active-1');
-        });
-
-        const slidewrap = document.querySelector(".slidewrap");
-        const slidescnt = document.querySelectorAll(".slide").length;
-        const slideContainer = document.getElementsByClassName("slides");
-        let currentSlide = 0;
-
         function goToSlide(index) {
             currentSlide = index;
             slideContainer[0].style.transition = 'transform 0.5s ease';
@@ -163,48 +147,6 @@ session_start();
             styleTag.innerHTML = style;
             document.head.appendChild(styleTag);
         }
-
-        function Createpagination() {
-            //HTML Tag 생성
-            slidewrap.innerHTML += `<div class="pagination"></div>`;
-            const pagination = document.querySelector(".pagination");
-            for (let i = 1; i < slidescnt; i++) {
-                if (i === 1) { pagination.innerHTML += `<li class="act"><a>•</a></li>`; }
-                pagination.innerHTML += `<li><a>•</a></li>`;
-            }
-
-            //CSS 생성
-            const paginationStyle = `
-        .pagination {
-            display : flex;
-            position : absolute;
-            left : 50%;
-            transform: translateX(-50%);
-            bottom : 0;
-        }
-        .pagination li{
-            font-size : 50px;
-            list-style: none;
-            color:  white;
-            opacity: 0.5;
-        }
-        .pagination .act{
-            opacity: 1;
-        }
-    `
-            AddStyle(paginationStyle);
-
-            //페이지네이션 이벤트 생성
-            const paginationlink = document.querySelectorAll(".pagination li a");
-            paginationlink.forEach((link, index) => {
-                link.addEventListener('click', (event) => {
-                    event.preventDefault(); // 기본 앵커 링크 동작을 막습니다.
-                    goToSlide(index);
-                });
-            });
-        }
-
-        Createpagination();
 
         function autoslide() {
             const index = (currentSlide + 1) < slidescnt ? currentSlide + 1 : 0;

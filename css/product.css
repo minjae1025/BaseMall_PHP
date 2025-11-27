@@ -1,0 +1,33 @@
+.product-container {
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 20px;
+}
+
+.product-main {
+    display: flex;
+    gap: 20px;
+}
+
+.product-image {
+    border-radius: 10px;
+    width: 50%;
+}
+
+.product-content {
+    align-content: space-between;
+    display: grid;
+    flex-direction: column;
+    flex: 1 0 auto;
+}
+
+.product-buy {
+    margin-top: 20px;
+    display: grid;
+    gap: 10px;
+}
+
+.product-details {
+    line-height: 1.6;
+}
